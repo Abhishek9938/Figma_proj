@@ -1,0 +1,24 @@
+#section-feeds{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--8, 0.5rem);
+    align-self: stretch;
+}
+h2{
+    display: flex;
+    padding: var(--8, 0.5rem) var(--4, 0.25rem);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    align-self: stretch;
+    color: var(--black-100, #1C1C1C) !important;
+    font-feature-settings: 'ss01' on, 'cv01' on, 'cv11' on;
+
+    /* 14 Semibold */
+    font-family: Inter;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.25rem; /* 142.857% */
+}

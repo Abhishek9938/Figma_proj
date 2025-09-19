@@ -38,9 +38,9 @@ function ActivityFeed() {
   return (
     <>
       <section id="section-feeds">
-          <div class="users-container">
-            <div class="users-header">
-              <h2 class="users-title" style={{color:`var(${COLORS.BLACK100})`}}>Activities</h2>
+          <div className="users-container">
+            <div className="users-header">
+              <h2 className="users-title" style={{color:`var(${COLORS.BLACK100})`}}>Activities</h2>
             </div>
 
             {activityData.map((user) => (

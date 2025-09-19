@@ -14,9 +14,9 @@ function ContactList() {
   return (
     <>
       <section id="section-contacts">
-          <div class="contacts-container">
-            <div class="contacts-header">
-              <h2 class="contacts-title" style={{color:`var(${COLORS.BLACK100})`}}>Contacts</h2>
+          <div className="contacts-container">
+            <div className="contacts-header">
+              <h2 className="contacts-title" style={{color:`var(${COLORS.BLACK100})`}}>Contacts</h2>
             </div>
 
             {userImages.map((user) => (
