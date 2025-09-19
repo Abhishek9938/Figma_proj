@@ -1,0 +1,22 @@
+.section-contacts{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--8, 0.5rem);
+    align-self: stretch;
+}
+.contacts-title{
+    display: flex;
+    padding: var(--8, 0.5rem) var(--4, 0.25rem);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    align-self: stretch;
+    border-radius: var(--8, 0.5rem);
+    font-family: Inter;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.25rem; /* 142.857% */
+}

@@ -1,0 +1,35 @@
+import AvatarName from '../../Elements/AvatarName/AvatarName'
+import { Avatars } from '../../../src/assets/Users/Contacts/Contacts'
+import './ContactList.css'
+import { COLORS } from '../../../styles/colors';
+const userImages = [
+  { id: 1, name: 'Natali Craig', img: Avatars.Natali_Craig},
+  { id: 2, name: 'Drew Cano', img: Avatars.Drew_Cano },
+  { id: 3, name: 'Orlando Diggs', img: Avatars.Orlando_Diggs },
+  { id: 4, name: 'Andi Lane', img: Avatars.Andi_Lane },
+  { id:5 , name: 'Kate Morrison', img: Avatars.Kate_Morrison },
+  { id:6 , name: 'Koray Okumus', img: Avatars.Koray_Okumus},
+];
+function ContactList() {
+  return (
+    <>
+      <section id="section-contacts">
+          <div class="contacts-container">
+            <div class="contacts-header">
+              <h2 class="contacts-title" style={{color:`var(${COLORS.BLACK100})`}}>Contacts</h2>
+            </div>
+
+            {userImages.map((user) => (
+            <AvatarName 
+                key={user.id}
+                name={user.name}
+                img={user.img}
+            />
+            ))}
+        </div>
+      </section>
+    </>
+  )
+}
+
+export default ContactList

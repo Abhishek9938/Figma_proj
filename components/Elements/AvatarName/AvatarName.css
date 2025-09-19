@@ -1,0 +1,22 @@
+.contact-item{
+    display: flex;
+    padding: var(--4, 0.25rem);
+    align-items: center;
+    align-content: center;
+    gap: 0.5rem var(--8, 0.5rem);
+    align-self: stretch;
+    flex-wrap: wrap;
+
+}
+
+.contact-avatar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-name{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
