@@ -7,22 +7,26 @@ const notificationData=[
   { "id":1,
     "icon": Noticons.BugBeetle,
     "message": "You have a bug that needs...",
-    "time": "Just now"
+    "time": "Just now",
+    "color": COLORS.BLUE  
   },
   { "id":2,
     "icon": Noticons.User,
     "message": "New user registered",
-    "time": "59 minutes ago"
+    "time": "59 minutes ago",
+    "color":COLORS.PURPLE  
   },
   { "id":3,
     "icon": Noticons.BugBeetle,
     "message": "You have a bug that needs...",
-    "time": "12 hours ago"
+    "time": "12 hours ago",
+    "color":COLORS.BLUE 
   },
   { "id":4,
     "icon": Noticons.Broadcast,
     "message": "Andi Lane subscribed to you",
-    "time": "Today, 11:59 AM"
+    "time": "Today, 11:59 AM",
+    "color":COLORS.PURPLE
   }
 ]
 
@@ -41,6 +45,7 @@ function NotificationPanel() {
                 message={data.message}
                 img={data.icon}
                 time={data.time}
+                color={data.color}
             />
             ))}
         </div>

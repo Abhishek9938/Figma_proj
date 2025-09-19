@@ -13,8 +13,7 @@
     padding: var(--4, 0.25rem);
     justify-content: center;
     align-items: center;
-    border-radius: var(--Radius-8, 0.5rem);
-    background: var(--Primary-Blue, #E3F5FF);
+    border-radius: var(--Radius-8, 0.5rem) !important;
 }
 
 .details{
@@ -41,7 +40,7 @@
 }
 
 .noti-time{
-    color: var(--black-40, rgba(28, 28, 28, 0.40));
+    color: var(--black-40, rgba(28, 28, 28, 0.40)) !important;
     font-feature-settings: 'ss01' on, 'cv01' on, 'cv11' on;
 
     /* 12 Regular */

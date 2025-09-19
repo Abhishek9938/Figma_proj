@@ -8,6 +8,7 @@ import BasicTable from '../components/Cards/Table/Table';
 import TableRow from '../components/Cards/TableRow/TableRow';
 import ActivityFeed from '../components/Layouts/ActivityFeed/ActivityFeed';
 import NotificationPanel from '../components/Layouts/NotificationPanel/NotificationPanel';
+
 function App() {
   const [count, setCount] = useState(0)
     const [currentTime, setCurrentTime] = useState(new Date().toLocaleTimeString());
