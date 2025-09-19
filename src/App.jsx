@@ -6,6 +6,7 @@ import ChartCard from '../components/Cards/ChartCard/ChartCard';
 import ContactList from '../components/Layouts/ContactList/ContactList';
 import BasicTable from '../components/Cards/Table/Table';
 import TableRow from '../components/Cards/TableRow/TableRow';
+import ActivityFeed from '../components/Layouts/ActivityFeed/ActivityFeed';
 function App() {
   const [count, setCount] = useState(0)
     const [currentTime, setCurrentTime] = useState(new Date().toLocaleTimeString());
@@ -23,6 +24,7 @@ function App() {
 
       
       <ContactList/>
+      <ActivityFeed/>
       <BasicTable/>
 
       <h1>Vite + React</h1>
