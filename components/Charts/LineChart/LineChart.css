@@ -65,7 +65,7 @@ span{
     font-weight: 400;
     line-height: 1.25rem; /* 142.857% */
 }
-img{
+.week>img{
     display: inline;
     padding: 0.125rem var(--8, 0.25rem) 0.125rem var(--4, 0.25rem);
     align-items: center;

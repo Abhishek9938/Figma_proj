@@ -19,11 +19,7 @@
     background-color: rgba(28, 28, 28, 0.10);
 }
 
-.icon-button img {
-    display: block;
-    width: 16px;
-    height: 16px;
-}
+
 
 .Dashboards {
     display: inline-flex;
@@ -47,7 +43,7 @@
 }
 
 .Dashboards:hover {
-    color: var(--black-60, rgba(28, 28, 28, 0.60));
+    background-color: rgba(28, 28, 28, 0.10);
 }
 
 .Default {
@@ -72,5 +68,5 @@
 }
 
 .Default:hover {
-    color: var(--black-80, rgba(28, 28, 28, 0.80));
+    background-color:rgba(28, 28, 28, 0.10);
 }

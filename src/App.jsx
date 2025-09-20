@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './App.css'
+
 import React, { useEffect} from 'react';
 import Card from '../components/Cards/Card/Card'
 import ChartCard from '../components/Cards/ChartCard/ChartCard';
@@ -32,10 +32,10 @@ function App() {
       <ContactList/>
       <ActivityFeed/>
       <NotificationPanel/>
-      <BasicTable/> */}
-      {/* <LineChart/> */}
+      <BasicTable/>
+      <LineChart/>
       <TreadyLinechart/>
-      <TreadyBarchart/>
+      <TreadyBarchart/> */}
       
 
       <h1>Vite + React</h1>
