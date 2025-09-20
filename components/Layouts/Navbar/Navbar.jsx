@@ -20,7 +20,7 @@ function Navbar() {
       <div className='utilities-section'>
         <div className="search-input-container">
           <img src={navbarIcons.Search} alt="Search"  className="search-icon"/>
-          <input type="text" placeholder="Search" autofocus="false"/>
+          <input type="text" placeholder="Search" autoFocus="false"/>
           <span className="slash">⌘/</span>
 
 
