@@ -8,6 +8,7 @@ import BasicTable from '../components/Cards/Table/Table';
 import TableRow from '../components/Cards/TableRow/TableRow';
 import ActivityFeed from '../components/Layouts/ActivityFeed/ActivityFeed';
 import NotificationPanel from '../components/Layouts/NotificationPanel/NotificationPanel';
+import Navbar from '../components/Layouts/Navbar/Navbar';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -23,6 +24,7 @@ function App() {
 
   return (
     <>
+    <Navbar/>
 
       
       <ContactList/>

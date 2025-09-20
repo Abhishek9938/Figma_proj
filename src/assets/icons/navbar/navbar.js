@@ -6,8 +6,8 @@ import icon5 from './Star.svg';
 import icon6 from './Sun.svg';
 
 export const navbarIcons = {
-  Broadcast: icon1,
-  BugBeetle: icon2,
+  Bell: icon1,
+  ClockCounterClockwise: icon2,
   Search: icon3,
   Sidebar: icon4,
   Star:icon5,
