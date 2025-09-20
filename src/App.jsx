@@ -13,6 +13,7 @@ import LineChart from '../components/Charts/LineChart/LineChart';
 import BasicLineChart from '../components/Charts/LineChart/LineChart';
 import TreadyLinechart from '../components/Charts/LineChart/LineChart';
 import TreadyBarchart from '../components/Charts/BarChart/BarChart';
+import MapChart from '../components/Charts/MapChart/MapChart';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -37,7 +38,7 @@ function App() {
       <TreadyLinechart/>
       <TreadyBarchart/> */}
       
-
+      <MapChart />
       <h1>Vite + React</h1>
       <div className="time">
         <h2>{currentTime}</h2>
@@ -48,6 +49,12 @@ function App() {
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
       </div>
+      
+      {/* World Map Chart */}
+  
+        
+
+      
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
