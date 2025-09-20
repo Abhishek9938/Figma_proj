@@ -9,6 +9,9 @@ import TableRow from '../components/Cards/TableRow/TableRow';
 import ActivityFeed from '../components/Layouts/ActivityFeed/ActivityFeed';
 import NotificationPanel from '../components/Layouts/NotificationPanel/NotificationPanel';
 import Navbar from '../components/Layouts/Navbar/Navbar';
+import LineChart from '../components/Charts/LineChart/LineChart';
+import BasicLineChart from '../components/Charts/LineChart/LineChart';
+import LargerHighlightLineNoSnap from '../components/Charts/LineChart/LineChart';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -24,13 +27,14 @@ function App() {
 
   return (
     <>
-    <Navbar/>
-
-      
+      {/* <Navbar/>
       <ContactList/>
       <ActivityFeed/>
       <NotificationPanel/>
-      <BasicTable/>
+      <BasicTable/> */}
+      {/* <LineChart/> */}
+      <LargerHighlightLineNoSnap/>
+      
 
       <h1>Vite + React</h1>
       <div className="time">
