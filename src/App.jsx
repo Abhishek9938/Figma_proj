@@ -11,7 +11,8 @@ import NotificationPanel from '../components/Layouts/NotificationPanel/Notificat
 import Navbar from '../components/Layouts/Navbar/Navbar';
 import LineChart from '../components/Charts/LineChart/LineChart';
 import BasicLineChart from '../components/Charts/LineChart/LineChart';
-import LargerHighlightLineNoSnap from '../components/Charts/LineChart/LineChart';
+import TreadyLinechart from '../components/Charts/LineChart/LineChart';
+import TreadyBarchart from '../components/Charts/BarChart/BarChart';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -33,7 +34,8 @@ function App() {
       <NotificationPanel/>
       <BasicTable/> */}
       {/* <LineChart/> */}
-      <LargerHighlightLineNoSnap/>
+      <TreadyLinechart/>
+      <TreadyBarchart/>
       
 
       <h1>Vite + React</h1>

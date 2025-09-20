@@ -1,0 +1,43 @@
+.bar-section{
+    display: flex;
+    height: max-content;
+    min-width: 40%;
+    padding: var(--24, 1.5rem);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--16, 1rem);
+    flex: 1 0 0;
+    border-radius: var(--16, 1rem);
+    background: var(--Primary-Light, #F7F9FB);
+}
+.title-group{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    gap: 1rem var(--16, 1rem);
+    flex-wrap: wrap;
+}
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: var(--black-100, #1C1C1C);
+    font-feature-settings: 'ss01' on, 'cv01' on, 'cv11' on;
+
+    /* 14 Semibold */
+    font-family: Inter;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.25rem; /* 142.857% */
+}
+
+
+.bar-graph{
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    flex: 1 0 0;
+    align-self: stretch;
+}

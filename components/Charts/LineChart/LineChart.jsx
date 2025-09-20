@@ -27,7 +27,7 @@ const settings = {
     { data: pData, highlightScope, showMark: false, color: '#A8C5DA' },
     { data: uData , highlightScope, showMark: false, color: '#1C1C1C' },
   ],
-  xAxis: [{ scaleType: 'point', data: xLabels,stroke: '#1C1C1C33' }],
+  xAxis: [{ scaleType: 'point', data: xLabels,stroke: '#1C1C1C33',disableLine:true,disableTicks: true }],
   yAxis: [{ 
     width: 50,
     min: 0,
@@ -40,7 +40,8 @@ const settings = {
       if (value === 30) return '30M';
       return '';
     },
-    disableLine: true
+    disableLine: true,
+    disableTicks: true 
   }],
   grid: { 
     vertical: false, 
@@ -52,7 +53,7 @@ const settings = {
   margin,
 };
 
-export default function LargerHighlightLineNoSnap() {
+export default function TreadyLinechart() {
   return (
     <div className='line-section' >
         <div className='title-group'>
