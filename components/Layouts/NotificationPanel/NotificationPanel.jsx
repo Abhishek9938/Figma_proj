@@ -2,7 +2,7 @@
 import { Noticons } from "../../../src/assets/icons/notification/notification";
 import { COLORS } from "../../../styles/colors";
 import Notification from "../../Elements/Notification/Notification";
-
+import './NotificationPanel.css'
 const notificationData=[
   { "id":1,
     "icon": Noticons.BugBeetle,
@@ -33,23 +33,26 @@ const notificationData=[
 function NotificationPanel() {
   return (
     <>
+    <div className="NotificationPanel">
       <section id="section-feeds">
           <div className="noti-container">
             <div className="noti-header">
               <h2 className="noti-title" style={{color:`var(${COLORS.BLACK100})`}}>Notifications</h2>
             </div>
-
-            {notificationData.map((data) => (
-            <Notification 
-                key={data.id}
-                message={data.message}
-                img={data.icon}
-                time={data.time}
-                color={data.color}
-            />
-            ))}
+            <div className='noti-main'>
+              {notificationData.map((data) => (
+              <Notification 
+                  key={data.id}
+                  message={data.message}
+                  img={data.icon}
+                  time={data.time}
+                  color={data.color}
+              />
+              ))}
+            </div>
         </div>
       </section>
+      </div>
     </>
   )
 }

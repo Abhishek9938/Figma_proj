@@ -52,15 +52,17 @@ const settings = {
 
 export default function TreadyBarchart() {
   return (
-    <div className='bar-section' >
-        <div className='title-group'>
-          <div className='title'>Projections vs Actuals</div>
-        </div>
+    <div className='TreadyBarchart'>
+      <div className='bar-section' >
+          <div className='title-group'>
+            <div className='title'>Projections vs Actuals</div>
+          </div>
+          
+          <div className='bar-graph'>
+          <MuiBarChart {...settings}   bar={{barThickness: 40,categoryGapRatio: 0.3, barGapRatio: 0.1}}/>
+          </div>
         
-        <div className='bar-graph'>
-        <MuiBarChart {...settings}   bar={{barThickness: 40,categoryGapRatio: 0.3, barGapRatio: 0.1}}/>
-        </div>
-       
+      </div>
     </div>
   );
 }

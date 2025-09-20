@@ -1,4 +1,4 @@
-.card{
+.Card .card-main{
     font-family: Inter;
     width: 12.63rem;
     height: 7.00rem;
@@ -13,14 +13,14 @@
     color: var(--black-100, #1C1C1C);
 
 }
-h3{
+.Card h3{
     font-family: Inter;
     font-size: 0.875rem;
     font-style: normal;
     font-weight: 600;
     line-height: 1.25rem; /* 142.857% */
 }
-.card-inline{
+.Card .card-inline{
     display:flex;
     align-self: stretch;
     justify-content: space-between;
@@ -34,7 +34,7 @@ h3{
     
 }
 
-.stats-inline{
+.Card .stats-inline{
     display: flex;
     align-items: center;
     align-content: center;

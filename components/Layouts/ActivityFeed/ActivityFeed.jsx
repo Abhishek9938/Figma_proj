@@ -37,22 +37,25 @@ const activityData = [
 function ActivityFeed() {
   return (
     <>
+    <div className="ActivityFeed">
       <section id="section-feeds">
           <div className="users-container">
             <div className="users-header">
               <h2 className="users-title" style={{color:`var(${COLORS.BLACK100})`}}>Activities</h2>
             </div>
-
-            {activityData.map((user) => (
-            <ActivityItem 
-                key={user.id}
-                message={user.message}
-                img={user.avatar}
-                time={user.time}
-            />
-            ))}
+            <div className='activity-main'>
+              {activityData.map((user) => (
+              <ActivityItem 
+                  key={user.id}
+                  message={user.message}
+                  img={user.avatar}
+                  time={user.time}
+              />
+              ))}
+            </div>
         </div>
       </section>
+      </div>
     </>
   )
 }

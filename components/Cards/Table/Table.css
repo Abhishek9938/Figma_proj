@@ -1,4 +1,4 @@
-h3{
+.BasicTable h3{
     font-family: Inter;
     font-size: 0.875rem;
     font-style: normal;
@@ -11,7 +11,7 @@ h3{
     align-self: stretch;
     border-radius: var(--8, 0.5rem);
 }
-.basic-table{
+.BasicTable .basic-table{
     display: flex;
     min-width: 41.375rem;
     padding: var(--24, 1.5rem);
@@ -22,7 +22,7 @@ h3{
     border-radius: var(--16, 1rem);
 }
 
-.basic-table th {
+.BasicTable .basic-table th {
     color: var(--black-40, rgba(28, 28, 28, 0.40)) !important;
     font-family: Inter;
     background-color: var(--Primary-Light) !important;

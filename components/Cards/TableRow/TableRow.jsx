@@ -1,12 +1,12 @@
 import './TableRow.css'
 function TableRow({fullname,price,quantity,amount}) {
-  return (
-    <tr>
-      <td>{fullname}</td>
-      <td>${price}</td>
-      <td>{quantity}</td>
-      <td>${amount}</td>
-    </tr>
+  return (  
+      <tr>
+        <td>{fullname}</td>
+        <td>${price}</td>
+        <td>{quantity}</td>
+        <td>${amount}</td>
+      </tr>
   );
 }
 

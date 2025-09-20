@@ -78,7 +78,6 @@ function MapChart() {
           .style("fill", "#A8C5DA")
           .style("stroke", "#ffffff")
           .style("stroke-width", 1)
-          .style("stroke-opacity", 0.8);
 
         // Add markers
         const markersData = [
@@ -100,29 +99,12 @@ function MapChart() {
           .attr("class", "marker")
           .attr("cx", d => projection(d.coordinates)[0])
           .attr("cy", d => projection(d.coordinates)[1])
-          .attr("r", 6)
+          .attr("r", 4)
           .style("fill", "#1C1C1C")
-          .style("stroke", "#ffffff")
+          .style("stroke", "#fff")
           .style("stroke-width", 2)
-          .style("cursor", "pointer");
-
-
-        // Add hover effects
-        markerGroup.selectAll(".marker")
-          .on("mouseover", function(event, d) {
-            d3.select(this)
-              .transition()
-              .duration(200)
-              .attr("r", 6)
-              .style("fill", "#1C1C1C");
-          })
-          .on("mouseout", function(event, d) {
-            d3.select(this)
-              .transition()
-              .duration(200)
-              .attr("r", 7)
-              .style("fill", "#1C1C1C");
-          });
+          .style("cursor", "pointer")
+          .style("filter", "drop-shadow(0 2px 2px rgba(0, 0, 0, 0.10))");
 
       } catch (error) {
         console.error("Error loading map data:", error);
@@ -147,26 +129,29 @@ function MapChart() {
 
   return (
     <>
-    <div className='revenue-world'>
-        <div className='title'>Revenue by Location</div>
-        <div className='map'>
-        <svg ref={svgRef} style={{ maxWidth: '100%', height: '100%' }}></svg>
-        </div>
-        <div className='revenue-list'>
-          {markers.map((marker, index) => (
-            <div key={index}>
-              <div  className='revenue-item'>
-                <span className='city-name'>{marker.name}</span>
-                <span className='revenue-amount'>{marker.revenue}</span>
+    <div className='MapChart'>
+      <div className='revenue-world'>
+          <div className='title'>Revenue by Location</div>
+          <div className='map'>
+          <svg ref={svgRef} style={{ maxWidth: '100%', height: '100%' }}></svg>
+          </div>
+          <div className='revenue-list'>
+            {markers.map((marker, index) => (
+              <div key={index}>
+                <div  className='revenue-item'>
+                  <span className='city-name'>{marker.name}</span>
+                  <span className='revenue-amount'>{marker.revenue}</span>
 
+                </div>
+                
+                <BorderLinearProgress variant="determinate" value={marker.progress} />
               </div>
               
-              <BorderLinearProgress variant="determinate" value={marker.progress} />
-            </div>
-            
-          ))}
-        </div>
-    </div>
+            ))}
+          </div>
+      </div>
+      </div>  
+
     </>
   );
 }

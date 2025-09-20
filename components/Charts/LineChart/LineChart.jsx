@@ -55,23 +55,25 @@ const settings = {
 
 export default function TreadyLinechart() {
   return (
-    <div className='line-section' >
-        <div className='title-group'>
-          <div className='title'>Revenue</div>
-          <span>|</span>
-          <div className='week'>
-            <img src={DotBlack} alt="DotBlack" />Current week <strong>$58,211</strong>
-          </div>
-          <div className='week'>
-            <img src={DotBlue} alt="DotBlack" />Previous Week  <strong>$68,768</strong>
-          </div>
+    <div className='TreadyLinechart'>
+      <div className='line-section' >
+          <div className='title-group'>
+            <div className='title'>Revenue</div>
+            <span>|</span>
+            <div className='week'>
+              <img src={DotBlack} alt="DotBlack" />Current week <strong>$58,211</strong>
+            </div>
+            <div className='week'>
+              <img src={DotBlue} alt="DotBlack" />Previous Week  <strong>$68,768</strong>
+            </div>
 
-        </div>
+          </div>
+          
+          <div className='line-graph'>
+            <LineChart {...settings} />
+          </div>
         
-        <div className='line-graph'>
-          <LineChart {...settings} />
-        </div>
-       
+      </div>
     </div>
   );
 }

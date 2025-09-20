@@ -4,7 +4,8 @@ import IconButton from "../../Elements/IconButton/IconButton"
 
 function Navbar() {
   return (
-    <nav className="navbar">
+    <div className='Navbar'>
+    <nav className="navbar-main">
       <div className="bread-crumbs-section">
         <div className="group-icons">
           <IconButton icon={navbarIcons.Sidebar} name="Sidebar" />
@@ -35,6 +36,7 @@ function Navbar() {
 
       </div>
     </nav>
+    </div>
   )
 }
 

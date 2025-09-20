@@ -1,4 +1,4 @@
-.activity-item{
+.ActivityItem .activity-item{
     display: flex;
     max-width: 15.3rem;
     padding: var(--4, 0.25rem);
@@ -8,24 +8,21 @@
     flex: 1 0 0;
     flex-wrap: wrap;
 }
-.user-avatar{
+.ActivityItem .user-avatar{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.details{
+.ActivityItem .user-details{
     display: flex;
-    width: 14.5rem;
-    padding: var(--4, 0.25rem);
+    flex-direction: column;
+    justify-content: center;
     align-items: flex-start;
-    align-content: flex-start;
-    gap: 0.5rem var(--8, 0.5rem);
     flex: 1 0 0;
-    flex-wrap: wrap;
 }
 
-.user-message{
+ .ActivityItem .user-message{
     display: -webkit-box;
     -webkit-box-orient: vertical;
     line-clamp: 1;
@@ -43,7 +40,7 @@
     line-height: 1.25rem; /* 142.857% */
 }
 
-.user-time{
+ .ActivityItem .user-time{
     color: var(--black-40, rgba(28, 28, 28, 0.40));
     font-feature-settings: 'ss01' on, 'cv01' on, 'cv11' on;
 

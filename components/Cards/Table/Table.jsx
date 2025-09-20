@@ -39,30 +39,32 @@ const tableData = [
 
 export default function BasicTable() {
   return (
-    <div className='basic-table' style={{ backgroundColor: `var(${COLORS.LIGHT})` }}>
+    <div className='BasicTable'>
+      <div className='basic-table' style={{ backgroundColor: `var(${COLORS.LIGHT})` }}>
 
-      <h3 style={{ color: `var(${COLORS.BLACK100})` }}>Top Selling Products</h3>
-      <Table aria-label="basic table">
-        <thead>
-          <tr >
-            <th>Name</th>
-            <th>Price</th>
-            <th>Quantity</th>
-            <th>Amount</th>
-          </tr>
-        </thead>
-        <tbody>
-          {tableData.map((data, index) => (
-            <TableRow  
-              key={index}
-              fullname={data.name}
-              price={data.price}
-              quantity={data.quantity}
-              amount={data.amount}
-              />
-          ))}
-        </tbody>
-      </Table>
+        <h3 style={{ color: `var(${COLORS.BLACK100})` }}>Top Selling Products</h3>
+        <Table aria-label="basic table">
+          <thead>
+            <tr >
+              <th>Name</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            {tableData.map((data, index) => (
+              <TableRow  
+                key={index}
+                fullname={data.name}
+                price={data.price}
+                quantity={data.quantity}
+                amount={data.amount}
+                />
+            ))}
+          </tbody>
+        </Table>
+      </div>
     </div>
   );
 }

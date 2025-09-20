@@ -13,21 +13,23 @@ const userImages = [
 function ContactList() {
   return (
     <>
-      <section id="section-contacts">
-          <div className="contacts-container">
-            <div className="contacts-header">
-              <h2 className="contacts-title" style={{color:`var(${COLORS.BLACK100})`}}>Contacts</h2>
-            </div>
+    <div className='ContactList'>
+        <section id="section-contacts">
+            <div className="contacts-container">
+              <div className="contacts-header">
+                <h2 className="contacts-title" style={{color:`var(${COLORS.BLACK100})`}}>Contacts</h2>
+              </div>
 
-            {userImages.map((user) => (
-            <AvatarName 
-                key={user.id}
-                name={user.name}
-                img={user.img}
-            />
-            ))}
-        </div>
-      </section>
+              {userImages.map((user) => (
+              <AvatarName 
+                  key={user.id}
+                  name={user.name}
+                  img={user.img}
+              />
+              ))}
+          </div>
+        </section>
+      </div>
     </>
   )
 }

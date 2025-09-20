@@ -1,4 +1,4 @@
-.line-section{
+.TreadyLinechart .line-section {
     display: flex;
     height: max-content;
     min-width: 100%;
@@ -8,16 +8,16 @@
     gap: var(--16, 1rem);
     flex: 1 0 0;
     border-radius: var(--16, 1rem);
-    background: var(--Primary-Light, #F7F9FB);
+    background: var(--Primary-Light, #1C1C1C);
 }
-.title-group{
+.TreadyLinechart .title-group {
     display: flex;
     align-items: center;
     align-content: center;
     gap: 1rem var(--16, 1rem);
     flex-wrap: wrap;
 }
-.title{
+.TreadyLinechart .title{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,7 +32,7 @@
     font-weight: 600;
     line-height: 1.25rem; /* 142.857% */
 }
-.week{
+.TreadyLinechart .week{
     color: var(--black-100, #1C1C1C);
 
     /* 12 Regular */
@@ -43,14 +43,14 @@
     line-height: 1.125rem; /* 150% */
 }
 
-.line-graph{
+.TreadyLinechart .line-graph{
     display: flex;
     align-items: flex-start;
     gap: 1rem;
     flex: 1 0 0;
     align-self: stretch;
 }
-span{
+.TreadyLinechart span {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -65,7 +65,7 @@ span{
     font-weight: 400;
     line-height: 1.25rem; /* 142.857% */
 }
-.week>img{
+.TreadyLinechart .week>img {
     display: inline;
     padding: 0.125rem var(--8, 0.25rem) 0.125rem var(--4, 0.25rem);
     align-items: center;

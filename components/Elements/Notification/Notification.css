@@ -1,4 +1,4 @@
-.notification-item{
+.Notification .notification-item{
     display: flex;
     width: 15.4rem;
     padding: var(--4, 0.25rem);
@@ -8,7 +8,7 @@
     flex: 1 0 0;
     flex-wrap: wrap;
 }
-.noti-avatar{
+.Notification .noti-avatar{
     display: flex;
     padding: var(--4, 0.25rem);
     justify-content: center;
@@ -16,16 +16,15 @@
     border-radius: var(--Radius-8, 0.5rem) !important;
 }
 
-.details{
+.Notification .noti-details{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     flex: 1 0 0;
-    border-radius: var(--8, 0.5rem);
 }
 
-.noti-message{
+.Notification .noti-message{
     overflow: hidden;
     color: var(--black-100, #1C1C1C);
     font-feature-settings: 'ss01' on, 'cv01' on, 'cv11' on;
@@ -39,7 +38,7 @@
     line-height: 1.25rem; /* 142.857% */
 }
 
-.noti-time{
+.Notification .noti-time{
     color: var(--black-40, rgba(28, 28, 28, 0.40)) !important;
     font-feature-settings: 'ss01' on, 'cv01' on, 'cv11' on;
 

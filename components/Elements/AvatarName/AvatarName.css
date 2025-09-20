@@ -1,4 +1,4 @@
-.contact-item{
+.AvatarName .contact-item{
     display: flex;
     padding: var(--4, 0.25rem);
     align-items: center;
@@ -9,12 +9,12 @@
 
 }
 
-.contact-avatar{
+.AvatarName .contact-avatar{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.contact-name{ 
+.AvatarName .contact-name{ 
     display: flex;
     flex-direction: column;
     justify-content: center;

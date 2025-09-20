@@ -1,4 +1,4 @@
-.bar-section{
+.TreadyBarchart .bar-section{
     display: flex;
     height: max-content;
     min-width: 40%;
@@ -10,14 +10,14 @@
     border-radius: var(--16, 1rem);
     background: var(--Primary-Light, #F7F9FB);
 }
-.title-group{
+.TreadyBarchart .title-group{
     display: flex;
     align-items: center;
     align-content: center;
     gap: 1rem var(--16, 1rem);
     flex-wrap: wrap;
 }
-.title{
+.TreadyBarchart .title{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,7 +34,7 @@
 }
 
 
-.bar-graph{
+.TreadyBarchart .bar-graph{
     display: flex;
     align-items: flex-start;
     gap: 1rem;

@@ -1,11 +1,11 @@
-#section-feeds{
+.NotificationPanel #section-feeds{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: var(--8, 0.5rem);
     align-self: stretch;
 }
-h2{
+.NotificationPanel h2{
     display: flex;
     padding: var(--8, 0.5rem) var(--4, 0.25rem);
     flex-direction: column;
@@ -21,4 +21,11 @@ h2{
     font-style: normal;
     font-weight: 600;
     line-height: 1.25rem; /* 142.857% */
+}
+.NotificationPanel .noti-main{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--8, 0.5rem);
+    align-self: stretch;
 }

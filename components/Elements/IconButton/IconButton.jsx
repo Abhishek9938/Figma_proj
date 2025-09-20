@@ -2,6 +2,7 @@ import './IconButton.css'
 function IconButton({icon,name}) {
   return (
     <>
+    <div className='IconButton'>
       {icon ? (
         <button className="icon-button">
           <img src={icon} alt={name} />
@@ -9,7 +10,9 @@ function IconButton({icon,name}) {
       ) : (
         <button className={name}>{name}</button>
       )}
+      </div>
     </>
+
   )
 }
 

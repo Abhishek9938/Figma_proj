@@ -1,4 +1,4 @@
-.icon-button {
+.IconButton .icon-button {
     display: inline-flex;
     padding: var(--4, 0.25rem);
     justify-content: center;
@@ -11,17 +11,17 @@
     transition: background-color 0.2s ease;
 }
 
-.icon-button:hover {
+.IconButton .icon-button:hover {
     background-color: rgba(28, 28, 28, 0.05);
 }
 
-.icon-button:active {
+.IconButton .icon-button:active {
     background-color: rgba(28, 28, 28, 0.10);
 }
 
 
 
-.Dashboards {
+.IconButton .Dashboards {
     display: inline-flex;
     padding: var(--4, 0.25rem) var(--8, 0.5rem);
     justify-content: center;
@@ -42,11 +42,11 @@
     transition: color 0.2s ease;
 }
 
-.Dashboards:hover {
+.IconButton .Dashboards:hover {
     background-color: rgba(28, 28, 28, 0.10);
 }
 
-.Default {
+.IconButton .Default {
     display: inline-flex;
     padding: var(--4, 0.25rem) var(--8, 0.5rem);
     justify-content: center;
@@ -67,6 +67,6 @@
     transition: color 0.2s ease;
 }
 
-.Default:hover {
+.IconButton .Default:hover {
     background-color:rgba(28, 28, 28, 0.10);
 }

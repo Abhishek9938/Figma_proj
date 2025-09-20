@@ -4,9 +4,11 @@ import './AvatarName.css'
 
 const AvatarName = ({ name, img }) => {
   return (
-    <div className='contact-item'>
-      <Avatar className='contact-avatar' size="sm" alt={name} src={img} />
-      <span className='contact-name' style={{color:`var(${COLORS.BLACK100})`}}>{name}</span>
+    <div className='AvatarName'>
+      <div className='contact-item'>
+        <Avatar className='contact-avatar' size="sm" alt={name} src={img} />
+        <span className='contact-name' style={{color:`var(${COLORS.BLACK100})`}}>{name}</span>
+      </div>
     </div>
   );
 }

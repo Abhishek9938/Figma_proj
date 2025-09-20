@@ -10,7 +10,6 @@ import ActivityFeed from '../components/Layouts/ActivityFeed/ActivityFeed';
 import NotificationPanel from '../components/Layouts/NotificationPanel/NotificationPanel';
 import Navbar from '../components/Layouts/Navbar/Navbar';
 import LineChart from '../components/Charts/LineChart/LineChart';
-import BasicLineChart from '../components/Charts/LineChart/LineChart';
 import TreadyLinechart from '../components/Charts/LineChart/LineChart';
 import TreadyBarchart from '../components/Charts/BarChart/BarChart';
 import MapChart from '../components/Charts/MapChart/MapChart';
@@ -29,14 +28,15 @@ function App() {
 
   return (
     <>
-      {/* <Navbar/>
+      <ChartCard/>
+      <Navbar/>
       <ContactList/>
       <ActivityFeed/>
       <NotificationPanel/>
       <BasicTable/>
       <LineChart/>
       <TreadyLinechart/>
-      <TreadyBarchart/> */}
+      <TreadyBarchart/>
       
       <MapChart />
       <h1>Vite + React</h1>
