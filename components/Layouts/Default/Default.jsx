@@ -6,10 +6,10 @@ import TreadyLinechart from '../../Charts/LineChart/LineChart'
 import MapChart from '../../Charts/MapChart/MapChart'
 import BasicTable from '../../Cards/Table/Table'
 import Navbar from '../Navbar/Navbar' 
-function Default() {
+function Default({ onToggleSidebar, onToggleActivityBar, className }) {
   return (
-    <div className='Default-main'>
-        <Navbar/>
+    <div className={`Default-main ${className || ''}`}>
+        <Navbar onToggleSidebar={onToggleSidebar} onToggleActivityBar={onToggleActivityBar}/>
           <div className='fullwidth-default'>
           <div className='main-section'>
               <ChartCard/>

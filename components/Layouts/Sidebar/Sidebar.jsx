@@ -32,10 +32,10 @@ const sidebarData = [
   ];
   
 
-function Sidebar() {
+function Sidebar({ className }) {
   return (
     <>
-    <div className='Sidebar'>
+    <div className={`Sidebar ${className || ''}`}>
       <aside className="sidebar-main">
         <div className='profile'>
           <img className='user-profile' src={SidebarIcons.ByeWind} alt="ByeWind" />

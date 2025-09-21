@@ -8,7 +8,43 @@
     gap: var(--24, 1.5rem);
     flex-shrink: 0;
     border-left: 1px solid var(--black-10, rgba(28, 28, 28, 0.10));
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .ActivityBar{
     width: 17.5rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    min-width: 0;
+}
+
+/* ActivityBar toggle states */
+.ActivityBar.activity-bar-open {
+    width: 17.5rem;
+    min-width: 17.5rem;
+    opacity: 1;
+    transform: translateX(0);
+    visibility: visible;
+}
+
+.ActivityBar.activity-bar-closed {
+    width: 0;
+    min-width: 0;
+    opacity: 0;
+    transform: translateX(100%);
+    visibility: hidden;
+}
+
+/* Smooth transition for activity bar content */
+.ActivityBar .right-sidebar {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ActivityBar.activity-bar-closed .right-sidebar {
+    opacity: 0;
+    transform: translateX(20px);
+}
+
+.ActivityBar.activity-bar-open .right-sidebar {
+    opacity: 1;
+    transform: translateX(0);
 }

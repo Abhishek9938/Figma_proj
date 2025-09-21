@@ -8,10 +8,13 @@
     gap: var(--16, 1rem);
     flex-shrink: 0;
     border-right: 1px solid var(--black-10, rgba(28, 28, 28, 0.10));
+    transition: all 0.3s ease-in-out;
 }
 .Sidebar{
     max-width: 14rem;
-    
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    min-width: 0;
 }
 
 .Sidebar .profile{
@@ -50,4 +53,35 @@
     align-items: flex-start;
     gap: var(--4, 0.25rem);
     align-self: stretch;
+}
+
+/* Sidebar toggle states */
+.Sidebar.sidebar-open {
+
+    opacity: 1;
+    transform: translateX(0);
+    visibility: visible;
+}
+
+.Sidebar.sidebar-closed {
+    max-width: 0;
+    min-width: 0;
+    opacity: 0;
+    transform: translateX(-100%);
+    visibility: hidden;
+}
+
+/* Smooth transition for sidebar content */
+.Sidebar .sidebar-main {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.Sidebar.sidebar-closed .sidebar-main {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+.Sidebar.sidebar-open .sidebar-main {
+    opacity: 1;
+    transform: translateX(0);
 }

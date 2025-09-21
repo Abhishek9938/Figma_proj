@@ -2,13 +2,13 @@ import './Navbar.css'
 import { navbarIcons } from "../../../src/assets/icons/navbar/navbar"
 import IconButton from "../../Elements/IconButton/IconButton"
 
-function Navbar() {
+function Navbar({ onToggleSidebar,onToggleActivityBar }) {
   return (
     <div className='Navbar'>
     <nav className="navbar-main">
       <div className="bread-crumbs-section">
         <div className="group-icons">
-          <IconButton icon={navbarIcons.Sidebar} name="Sidebar" />
+          <IconButton icon={navbarIcons.Sidebar} name="Sidebar" onClick={onToggleSidebar} />
           <IconButton icon={navbarIcons.Star} name="Star" />
         </div>
         <div className="bread-crumbs">
@@ -29,7 +29,7 @@ function Navbar() {
           <IconButton icon={navbarIcons.Sun} name="Sun" />
           <IconButton icon={navbarIcons.ClockCounterClockwise} name="Clock" />
           <IconButton icon={navbarIcons.Bell} name="Bell" />
-          <IconButton icon={navbarIcons.Sidebar} name="Sidebar" />
+          <IconButton icon={navbarIcons.Sidebar} name="Sidebar" onClick={onToggleActivityBar} />
 
         </div>
 

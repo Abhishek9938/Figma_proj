@@ -1,0 +1,30 @@
+.home-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.main-content {
+    flex: 1;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    min-width: 0;
+    overflow: hidden;
+}
+
+/* When left sidebar is closed, expand main content */
+.main-content.sidebar-closed {
+    margin-left: 0;
+}
+
+/* When right sidebar is closed, expand main content */
+.main-content.activity-bar-closed {
+    margin-right: 0;
+}
+
+/* When both sidebars are closed, maximize main content */
+.main-content.sidebar-closed.activity-bar-closed {
+    flex: 1;
+    max-width: none;
+}
