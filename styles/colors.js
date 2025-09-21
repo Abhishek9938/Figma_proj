@@ -3,5 +3,6 @@ export const COLORS = {
   PURPLE: "--Primary-Purple",
   BLUE: "--Primary-Blue",
   BLACK100:"--black-100",
-  BLACK40:"--black-40"
+  BLACK40:"--black-40",
+  DARK:"--Primary-Dark"
 };
