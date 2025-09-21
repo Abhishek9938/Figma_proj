@@ -1,10 +1,13 @@
 import './Navbar.css'
 import { navbarIcons } from "../../../src/assets/icons/navbar/navbar"
 import IconButton from "../../Elements/IconButton/IconButton"
+import { useDarkMode } from "../../../contexts/DarkModeContext"
 
 function Navbar({ onToggleSidebar,onToggleActivityBar }) {
+  const { isDarkMode, toggleDarkMode } = useDarkMode()
+  
   return (
-    <div className='Navbar'>
+    <div className={`Navbar ${isDarkMode ? 'dark-mode' : ''}`}>
     <nav className="navbar-main">
       <div className="bread-crumbs-section">
         <div className="group-icons">
@@ -26,7 +29,7 @@ function Navbar({ onToggleSidebar,onToggleActivityBar }) {
 
         </div>
         <div className="group-icons">
-          <IconButton icon={navbarIcons.Sun} name="Sun" />
+          <IconButton icon={navbarIcons.Sun} name="Sun" onClick={toggleDarkMode} />
           <IconButton icon={navbarIcons.ClockCounterClockwise} name="Clock" />
           <IconButton icon={navbarIcons.Bell} name="Bell" />
           <IconButton icon={navbarIcons.Sidebar} name="Sidebar" onClick={onToggleActivityBar} />

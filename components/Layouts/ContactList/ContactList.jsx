@@ -1,7 +1,7 @@
 import AvatarName from '../../Elements/AvatarName/AvatarName'
 import { Avatars } from '../../../src/assets/Users/Contacts/Contacts'
 import './ContactList.css'
-import { COLORS } from '../../../styles/colors';
+import { useDarkMode } from '../../../contexts/DarkModeContext';
 const userImages = [
   { id: 1, name: 'Natali Craig', img: Avatars.Natali_Craig},
   { id: 2, name: 'Drew Cano', img: Avatars.Drew_Cano },
@@ -11,13 +11,14 @@ const userImages = [
   { id:6 , name: 'Koray Okumus', img: Avatars.Koray_Okumus},
 ];
 function ContactList() {
+  const { isDarkMode } = useDarkMode()
   return (
     <>
     <div className='ContactList'>
-        <section id="section-contacts">
+        <section id={`section-contacts ${isDarkMode ? 'dark-mode' : ''}`}>
             <div className="contacts-container">
               <div className="contacts-header">
-                <h2 className="contacts-title" style={{color:`var(${COLORS.BLACK100})`}}>Contacts</h2>
+                <h2 className="contacts-title">Contacts</h2>
               </div>
 
               {userImages.map((user) => (

@@ -12,7 +12,7 @@
     justify-content: center;
     align-items: flex-start;
     align-self: stretch;
-    color: var(--black-100, #1C1C1C) !important;
+    color: var(--black-100, #1C1C1C);
     font-feature-settings: 'ss01' on, 'cv01' on, 'cv11' on;
 
     /* 14 Semibold */
@@ -28,4 +28,8 @@
     align-items: flex-start;
     gap: var(--8, 0.5rem);
     align-self: stretch;
+}
+
+.dark-mode .ActivityFeed h2{
+    color: #FFF;
 }

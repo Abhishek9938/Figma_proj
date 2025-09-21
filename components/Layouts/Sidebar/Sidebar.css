@@ -85,3 +85,7 @@
     opacity: 1;
     transform: translateX(0);
 }
+
+.dark-mode.Sidebar .user-name {
+    color: #FFF;
+}

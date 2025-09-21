@@ -7,9 +7,12 @@ import MapChart from '../../Charts/MapChart/MapChart'
 import BasicTable from '../../Cards/Table/Table'
 import Navbar from '../Navbar/Navbar' 
 import SalesDonutChart from '../../Charts/PieChart/PieChart'
+import { useDarkMode } from '../../../contexts/DarkModeContext'
 function Default({ onToggleSidebar, onToggleActivityBar, className }) {
+  const { isDarkMode } = useDarkMode()
+  
   return (
-    <div className={`Default-main ${className || ''}`}>
+    <div className={`Default-main ${className || ''} ${isDarkMode ? 'dark-mode' : ''}`}>
         <Navbar onToggleSidebar={onToggleSidebar} onToggleActivityBar={onToggleActivityBar}/>
           <div className='fullwidth-default'>
           <div className='main-section'>

@@ -2,6 +2,7 @@ import React from 'react'
 import './Sidebar.css'
 import { SidebarIcons } from '../../../src/assets/icons/sidebar/sidebar';
 import SidebarMenu from '../SidebarMenu/SidebarMenu';
+import { useDarkMode } from "../../../contexts/DarkModeContext"
 const sidebarData = [
     {
       title: "Favorites",
@@ -33,9 +34,11 @@ const sidebarData = [
   
 
 function Sidebar({ className }) {
+  const { isDarkMode } = useDarkMode()
+  
   return (
     <>
-    <div className={`Sidebar ${className || ''}`}>
+    <div className={`Sidebar ${className || ''} ${isDarkMode ? 'dark-mode' : ''}`}>
       <aside className="sidebar-main">
         <div className='profile'>
           <img className='user-profile' src={SidebarIcons.ByeWind} alt="ByeWind" />

@@ -11,12 +11,29 @@
     transition: background-color 0.2s ease;
 }
 
+.IconButton .icon-button img {
+    transition: filter 0.2s ease;
+}
+
 .IconButton .icon-button:hover {
     background-color: rgba(28, 28, 28, 0.05);
 }
 
 .IconButton .icon-button:active {
     background-color: rgba(28, 28, 28, 0.10);
+}
+
+/* Dark mode styles */
+.dark-mode .IconButton .icon-button:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.dark-mode .IconButton .icon-button:active {
+    background-color: rgba(255, 255, 255, 0.10);
+}
+
+.dark-mode .IconButton .icon-button img {
+    filter: brightness(0) invert(1);
 }
 
 
@@ -46,6 +63,14 @@
     background-color: rgba(28, 28, 28, 0.10);
 }
 
+.dark-mode .IconButton .Dashboards {
+    color: rgba(255, 255, 255, 0.40);
+}
+
+.dark-mode .IconButton .Dashboards:hover {
+    background-color: rgba(255, 255, 255, 0.10);
+}
+
 .IconButton .Default {
     display: inline-flex;
     padding: var(--4, 0.25rem) var(--8, 0.5rem);
@@ -69,4 +94,12 @@
 
 .IconButton .Default:hover {
     background-color:rgba(28, 28, 28, 0.10);
+}
+
+.dark-mode .IconButton .Default {
+    color: #ffffff;
+}
+
+.dark-mode .IconButton .Default:hover {
+    background-color: rgba(255, 255, 255, 0.10);
 }

@@ -1,4 +1,4 @@
-.sidebaritem-main{
+.SidebarItem .sidebaritem-main{
     display: flex;
     padding: var(--4, 0.25rem) var(--8, 0.5rem) var(--4, 0.25rem) 0;
     align-items: center;
@@ -11,15 +11,15 @@
     transition: background-color 0.2s ease;
 }
 
-.sidebaritem-main:hover {
+.SidebarItem .sidebaritem-main:hover {
     background-color: var(--black-5, rgba(28, 28, 28, 0.05));
 }
 
-.sidebaritem-main .spacer {
+.SidebarItem .sidebaritem-main .spacer {
     width: 1rem;
 }
 
-.sideitem-label{
+.SidebarItem .sideitem-label{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,4 +33,16 @@
     font-style: normal;
     font-weight: 400;
     line-height: 1.25rem; /* 142.857% */
+}
+
+.dark-mode .SidebarItem .sidebaritem-main:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.dark-mode .SidebarItem .sideitem-label {
+    color: #FFF;
+}
+
+.dark-mode .SidebarItem img{
+    filter: brightness(0) invert(1);
 }

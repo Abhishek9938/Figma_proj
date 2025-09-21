@@ -2,6 +2,7 @@
 import { Noticons } from "../../../src/assets/icons/notification/notification";
 import { COLORS } from "../../../styles/colors";
 import Notification from "../../Elements/Notification/Notification";
+import { useDarkMode } from '../../../contexts/DarkModeContext'
 import './NotificationPanel.css'
 const notificationData=[
   { "id":1,
@@ -31,13 +32,14 @@ const notificationData=[
 ]
 
 function NotificationPanel() {
+  const { isDarkMode } = useDarkMode()
   return (
     <>
     <div className="NotificationPanel">
-      <section id="section-feeds">
+      <section id={`section-feeds ${isDarkMode ? 'dark-mode' : ''}`}>
           <div className="noti-container">
             <div className="noti-header">
-              <h2 className="noti-title" style={{color:`var(${COLORS.BLACK100})`}}>Notifications</h2>
+              <h2 className="noti-title">Notifications</h2>
             </div>
             <div className='noti-main'>
               {notificationData.map((data) => (

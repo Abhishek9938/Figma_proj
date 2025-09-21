@@ -2,6 +2,7 @@ import './ActivityFeed.css'
 import { COLORS } from '../../../styles/colors';
 import { FeedImgs } from '../../../src/assets/Users/Feeds/Feeds';
 import ActivityItem from '../../Elements/ActivityItem/ActivityItem';
+import { useDarkMode } from '../../../contexts/DarkModeContext'
 const activityData = [
     {
       id: 1,
@@ -35,13 +36,14 @@ const activityData = [
     }
   ];
 function ActivityFeed() {
+  const { isDarkMode } = useDarkMode()
   return (
     <>
     <div className="ActivityFeed">
-      <section id="section-feeds">
+      <section id={`section-feeds ${isDarkMode ? 'dark-mode' : ''}`}>
           <div className="users-container">
             <div className="users-header">
-              <h2 className="users-title" style={{color:`var(${COLORS.BLACK100})`}}>Activities</h2>
+              <h2 className="users-title">Activities</h2>
             </div>
             <div className='activity-main'>
               {activityData.map((user) => (

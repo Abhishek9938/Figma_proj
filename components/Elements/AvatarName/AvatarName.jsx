@@ -1,13 +1,13 @@
 import Avatar from '@mui/joy/Avatar';
-import { COLORS } from '../../../styles/colors';
 import './AvatarName.css'
-
+import { useDarkMode } from '../../../contexts/DarkModeContext';
 const AvatarName = ({ name, img }) => {
+  const { isDarkMode } = useDarkMode()
   return (
     <div className='AvatarName'>
-      <div className='contact-item'>
+      <div className={`contact-item ${isDarkMode ? 'dark-mode' : ''}`}>
         <Avatar className='contact-avatar' size="sm" alt={name} src={img} />
-        <span className='contact-name' style={{color:`var(${COLORS.BLACK100})`}}>{name}</span>
+        <span className='contact-name'>{name}</span>
       </div>
     </div>
   );
