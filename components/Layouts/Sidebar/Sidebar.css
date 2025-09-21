@@ -1,6 +1,6 @@
 .Sidebar .sidebar-main{
     display: flex;
-    width: 13.25rem;
+    max-width: 13rem;
     height: 75.375rem;
     padding: var(--20, 1.25rem) var(--16, 1rem);
     flex-direction: column;
@@ -8,6 +8,10 @@
     gap: var(--16, 1rem);
     flex-shrink: 0;
     border-right: 1px solid var(--black-10, rgba(28, 28, 28, 0.10));
+}
+.Sidebar{
+    max-width: 14rem;
+    
 }
 
 .Sidebar .profile{

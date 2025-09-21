@@ -15,6 +15,9 @@ import TreadyBarchart from '../components/Charts/BarChart/BarChart';
 import MapChart from '../components/Charts/MapChart/MapChart';
 import Sidebar from '../components/Layouts/Sidebar/Sidebar';
 import Orderslist from '../components/Layouts/Orders/Orderslist';
+import ActivityBar from '../components/Layouts/ActivityBar/ActivityBar';
+import Default from '../components/Layouts/Default/Default';
+import Home from '../pages/Home/Home';
 
 
 function App() {
@@ -31,7 +34,7 @@ function App() {
 
   return (
     <>
-      <ChartCard/>
+      {/* <ChartCard/> */}
       {/* <Navbar/>
       <ContactList/>
       <ActivityFeed/>
@@ -39,12 +42,17 @@ function App() {
       <BasicTable/>
       <TreadyLinechart/>
       <TreadyBarchart/>
-      <MapChart /> */}
-      <Sidebar/>
+      <MapChart /> 
+      
       <Orderslist/>
+      */}
+      {/* <Sidebar/>
+      <ActivityBar/> */}
+      {/* <Default/> */}
+      <Home/>
       
 
-      <h1>Vite + React</h1>
+      {/* <h1>Vite + React</h1> */}
       {/* <div className="time">
         <h2>{currentTime}</h2>
         <button onClick={() => setCount((count) => count + 1)}>

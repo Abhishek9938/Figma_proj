@@ -6,7 +6,7 @@ const SidebarItem = ({ label, icon, link,isMultilink }) => {
     <>
       <div className="sidebaritem-main">
 
-        {isMultilink?<span><img src={SidebarIcons.ArrowLineRight} alt={link} /></span>:<span className="pl-4"></span>}
+        {isMultilink?<span><img src={SidebarIcons.ArrowLineRight} alt={link} /></span>:<span className="spacer"></span>}
         <span><img src={icon} alt={link} /></span>
         <span className='sideitem-label'>{label}</span>
       </div>

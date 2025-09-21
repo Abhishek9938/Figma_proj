@@ -19,7 +19,8 @@ const highlightScope = {
 };
 
 const settings = {
-  height: 300,
+  height: 200,
+  width:400,
   series: [
     { data: pData , showMark: false, color: '#A8C5DA', stack: 'stack1',barWidth: 25  },
     { data: uData , showMark: false, color: '#A8C5DA50', stack: 'stack1',barWidth: 25 },

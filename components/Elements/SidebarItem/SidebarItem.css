@@ -3,9 +3,20 @@
     padding: var(--4, 0.25rem) var(--8, 0.5rem) var(--4, 0.25rem) 0;
     align-items: center;
     align-content: center;
-    gap: 0.25rem var(--4, 0.25rem);
+    gap: 0.5rem;
     align-self: stretch;
     flex-wrap: wrap;
+    cursor: pointer;
+    border-radius: var(--8, 0.5rem);
+    transition: background-color 0.2s ease;
+}
+
+.sidebaritem-main:hover {
+    background-color: var(--black-5, rgba(28, 28, 28, 0.05));
+}
+
+.sidebaritem-main .spacer {
+    width: 1rem;
 }
 
 .sideitem-label{
