@@ -1,7 +1,10 @@
 import './TableRow.css'
+import { useDarkMode } from '../../../contexts/DarkModeContext';
 function TableRow({fullname,price,quantity,amount}) {
-  return (  
-      <tr style={{fontSize:"1em"}}>
+  const { isDarkMode } = useDarkMode();
+  return ( 
+     
+      <tr style={{fontSize:"1em"}} className={`TableRow ${isDarkMode ? 'dark-mode' : ''}`}>
         <td>{fullname}</td>
         <td>${price}</td>
         <td>{quantity}</td>

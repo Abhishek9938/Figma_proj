@@ -1,8 +1,72 @@
-.sales-piechart{
-    width: 30%;
+.SalesDonutChart .sales-piechart{
+    width: 100%;
     padding: 16px;
     min-width: 12.5rem;
     max-width: 20rem;
-    border: 1px solid #ddd;
-    border-radius: "8px";
+    border-radius: 8px;
+    border-radius: var(--16, 1rem);
+    background: var(--Primary-Light, #F7F9FB);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.SalesDonutChart{
+    width: 30%;
+}
+.SalesDonutChart .sales-piechart h3 {
+    margin-bottom: 16px;
+    color: var(--black-100, #1C1C1C);
+    font-feature-settings: 'ss01' on, 'cv01' on, 'cv11' on;
+
+    /* 14 Semibold */
+    font-family: Inter;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.25rem; /* 142.857% */
+}
+
+.SalesDonutChart .sales-piechart .legend {
+    margin-top: 12px;
+    color: var(--black-100, #1C1C1C);
+}
+
+.SalesDonutChart .sales-piechart .legend-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.SalesDonutChart .sales-piechart .legend-label {
+    display: flex;
+    align-items: center;
+    color: var(--black-100, #1C1C1C);
+}
+
+.SalesDonutChart .sales-piechart .legend-color-indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+
+.SalesDonutChart.dark-mode .sales-piechart {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--dark-border, #333333);
+}
+
+.SalesDonutChart.dark-mode .sales-piechart h3 {
+    color: var(--dark-text-primary, #FFFFFF);
+}
+
+.SalesDonutChart.dark-mode .sales-piechart .legend {
+    color: var(--dark-text-secondary, #E0E0E0);
+}
+
+.SalesDonutChart.dark-mode .sales-piechart .legend-label {
+    color: var(--dark-text-secondary, #E0E0E0);
+}
+
+.SalesDonutChart.dark-mode .sales-piechart .legend-item span:last-child {
+    color: var(--dark-text-primary, #FFFFFF);
 }

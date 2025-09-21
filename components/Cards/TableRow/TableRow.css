@@ -3,3 +3,9 @@ td{
     border-bottom: none !important;
 }
 
+.TableRow td{
+    font-size: 1em;
+}
+.TableRow.dark-mode td{
+    color: #fff;
+}

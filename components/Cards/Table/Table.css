@@ -27,12 +27,29 @@
 }
 
 .BasicTable .basic-table th {
-    color: var(--black-40, rgba(28, 28, 28, 0.40)) !important;
+    color: var(--black-40, rgba(28, 28, 28, 0.40)) ;
     font-family: Inter;
-    background-color: var(--Primary-Light) !important;
-    font-size: 1em !important;
-    font-style: normal !important;
-    font-weight: 400 !important;
-    line-height: 1.125rem !important; /* 150% */
+    background-color: var(--Primary-Light) ;
+    font-size: 1em ;
+    font-style: normal ;
+    font-weight: 400 ;
+    line-height: 1.125rem ; /* 150% */
     border-bottom: 1px solid var(--black-20, rgba(28, 28, 28, 0.20)) !important;
+}
+
+
+/* Dark modes */
+
+.BasicTable.dark-mode .basic-table {
+    background-color: rgba(255, 255, 255, 0.05) ;
+}
+
+.BasicTable.dark-mode h3 {
+    color: #FFFFFF ;
+}
+
+.BasicTable.dark-mode .basic-table th {
+    color: rgba(255, 255, 255, 0.40) ;
+    background-color: rgba(255, 255, 255, 0.05) ;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.20) ;
 }

@@ -1,6 +1,7 @@
 import Table from '@mui/joy/Table';
 import TableRow from '../TableRow/TableRow';
 import { COLORS } from '../../../styles/colors';
+import { useDarkMode } from '../../../contexts/DarkModeContext';
 import './Table.css'
 
 const tableData = [
@@ -38,11 +39,13 @@ const tableData = [
 
 
 export default function BasicTable() {
+  const { isDarkMode } = useDarkMode();
+  
   return (
-    <div className='BasicTable'>
-      <div className='basic-table' style={{ backgroundColor: `var(${COLORS.LIGHT})` }}>
+    <div className={`BasicTable ${isDarkMode ? 'dark-mode' : ''}`}>
+      <div className='basic-table' >
 
-        <h3 style={{ color: `var(${COLORS.BLACK100})` }}>Top Selling Products</h3>
+        <h3>Top Selling Products</h3>
         <Table aria-label="basic table">
           <thead>
             <tr >

@@ -7,20 +7,30 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
+import { useDarkMode } from '../../../contexts/DarkModeContext';
 
-const data = [
+const Lightdata = [
   { name: "Direct", value: 300.56, color: "#000000" },     // black
   { name: "Affiliate", value: 135.18, color: "#A2E7B5" }, // light green
   { name: "Sponsored", value: 154.02, color: "#8FA2FF" }, // blue-violet
   { name: "E-mail", value: 48.96, color: "#9BD8F9" },     // light blue
 ];
+const Darkdata = [
+  { name: "Direct", value: 300.56, color: "#C6C7F8" },     // indigo - visible in both themes
+  { name: "Affiliate", value: 135.18, color: "#BAEDBD" }, // emerald green - vibrant
+  { name: "Sponsored", value: 154.02, color: "#95A4FC" }, // violet - good contrast
+  { name: "E-mail", value: 48.96, color: "#B1E3FF" },     // cyan - bright and visible
+];
 
 function SalesDonutChart() {
+  const { isDarkMode } = useDarkMode();
+  const data = isDarkMode ? Darkdata : Lightdata;
   // const total = data.reduce((sum, entry) => sum + entry.value, 0);
 
   return (
+    <div className={`SalesDonutChart ${isDarkMode ? 'dark-mode' : ''}`}>
     <div className="sales-piechart" >
-      <h3 style={{ marginBottom: "16px" }}>Total Sales</h3>
+      <h3>Total Sales</h3>
 
       {/* Chart */}
       <ResponsiveContainer width="100%" height={200}>
@@ -45,26 +55,16 @@ function SalesDonutChart() {
       </ResponsiveContainer>
 
       {/* Legend */}
-      <div style={{ marginTop: "12px" }}>
+      <div className="legend">
         {data.map((entry, index) => (
           <div
             key={index}
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              marginBottom: "6px",
-            }}
+            className="legend-item"
           >
-            <span style={{ display: "flex", alignItems: "center" }}>
+            <span className="legend-label">
               <span
-                style={{
-                  display: "inline-block",
-                  width: 10,
-                  height: 10,
-                  backgroundColor: entry.color,
-                  borderRadius: "50%",
-                  marginRight: 8,
-                }}
+                className="legend-color-indicator"
+                style={{ backgroundColor: entry.color }}
               ></span>
               {entry.name}
             </span>
@@ -72,6 +72,7 @@ function SalesDonutChart() {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 }
