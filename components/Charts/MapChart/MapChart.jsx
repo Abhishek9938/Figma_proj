@@ -130,6 +130,7 @@ function MapChart() {
   return (
     <>
     <div className='MapChart'>
+    <div className='mapchart-main'>
       <div className='revenue-world'>
           <div className='title'>Revenue by Location</div>
           <div className='map'>
@@ -151,6 +152,7 @@ function MapChart() {
           </div>
       </div>
       </div>  
+      </div>
 
     </>
   );

@@ -40,7 +40,7 @@ export default function TreadyLinechart() {
   const data = isDarkMode ? Darkdata : Lightdata;
 
   const settings = {
-    height: 250,
+    height: 200,
     series: [
       { data: pData, highlightScope, showMark: false, color: data.seriesPcolor },
       { data: uData , highlightScope, showMark: false, color: data.seriesUcolor },
