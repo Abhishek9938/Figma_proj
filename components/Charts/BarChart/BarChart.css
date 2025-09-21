@@ -43,3 +43,33 @@
     flex: 1 1 auto;
     align-self: stretch;
 }
+
+
+.TreadyBarchart.dark-mode .week{
+    color:#fff;
+}
+
+.dark-mode .TreadyBarchart span{
+    color : #fff;
+}
+.TreadyBarchart.dark-mode .bar-section{
+
+    background-color:  rgba(255, 255, 255, 0.05);
+
+}
+
+.TreadyBarchart.dark-mode .title{
+    color: #fff;
+}
+
+.TreadyBarchart .MuiChartsAxis-tickLabel {
+  fill: rgba(28, 28, 28, 0.40) !important;
+}
+
+.dark-mode .TreadyBarchart .MuiChartsAxis-tickLabel {
+  fill: rgba(255, 255, 255, 0.40) !important; 
+}
+
+.dark-mode .TreadyBarchart .MuiChartsGrid-line {
+  stroke: #666666 !important;
+}

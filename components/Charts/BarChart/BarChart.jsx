@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { BarChart as MuiBarChart } from '@mui/x-charts/BarChart';
 import './BarChart.css' 
+import { useDarkMode } from '../../../contexts/DarkModeContext';
 const margin = { right: 24 };
 const uData = [15, 10, 11, 16, 19, 21];
 const pData = [7, 18, 15, 11, 13, 20];
@@ -12,16 +13,33 @@ const xLabels = [
   'May',
   'Jun',
 ];
+const Lightdata = {
+  seriesPcolor:'#A8C5DA',
+  seriesUcolor:'#A8C5DA50',
+  xStroke : '#1C1C1C33',
+  gridStroke: '#1C1C1C66'
+}
+const Darkdata = {
+  seriesPcolor:'#A8C5DA',
+  seriesUcolor:'#A8C5DA50',
+  xStroke : '#FFFFFF66',
+  gridStroke: '#FFFFFF33'
+}
 
 
+
+export default function TreadyBarchart() {
+  const { isDarkMode } = useDarkMode();
+  const data = isDarkMode ? Darkdata : Lightdata;
+  
 const settings = {
   height: 160,
 
   series: [
-    { data: pData , showMark: false, color: '#A8C5DA', stack: 'stack1',barWidth: 25  },
-    { data: uData , showMark: false, color: '#A8C5DA50', stack: 'stack1',barWidth: 25 },
+    { data: pData , showMark: false, color: data.seriesPcolor, stack: 'stack1',barWidth: 25  },
+    { data: uData , showMark: false, color: data.seriesUcolor, stack: 'stack1',barWidth: 25 },
   ],
-  xAxis: [{ scaleType: 'band', data: xLabels,stroke: '#1C1C1C33',disableTicks: true }],
+  xAxis: [{ scaleType: 'band', data: xLabels,stroke: data.xStroke,disableTicks: true }],
   yAxis: [{ 
     width: 50,
     min: 0,
@@ -41,15 +59,13 @@ const settings = {
     vertical: false, 
     horizontal: true,
     horizontalLine: {
-      stroke: '#1C1C1C66'
+      stroke: data.gridStroke
     }
   },
   margin,
 };
-
-export default function TreadyBarchart() {
   return (
-    <div className='TreadyBarchart'>
+    <div className={`TreadyBarchart ${isDarkMode ? 'dark-mode' : ''}`}>
       <div className='bar-section' >
           <div className='title-group'>
             <div className='title'>Projections vs Actuals</div>
