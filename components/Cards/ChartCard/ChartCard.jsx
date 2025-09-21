@@ -10,7 +10,7 @@ function ChartCard() {
   ];
   return (
     <>
-    <div className="card-chart grid grid-cols-2 gap-4">
+    <div className="card-chart grid grid-cols-2 gap-4" style={{width: "45%"}}>
       {cardsData.map((card, id) => (
         <Card 
           key={id}

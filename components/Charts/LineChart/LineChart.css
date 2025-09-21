@@ -10,6 +10,9 @@
     border-radius: var(--16, 1rem);
     background: var(--Primary-Light, #1C1C1C);
 }
+.TreadyLinechart{
+    width: 65%;
+}
 .TreadyLinechart .title-group {
     display: flex;
     align-items: center;

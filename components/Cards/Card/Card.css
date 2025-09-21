@@ -1,11 +1,10 @@
 .Card .card-main{
     font-family: Inter;
-    width: 12.63rem;
+    width: 100%;
     height: 7.00rem;
     border-radius: 1.00rem;
     display: flex;
-    min-width: 12.5rem;
-    padding: var(--24, 1.5rem);
+    padding: 1.5rem;
     flex-direction: column;
     align-items: flex-start;
     gap: var(--8, 8px);
@@ -13,6 +12,7 @@
     color: var(--black-100, #1C1C1C);
 
 }
+
 .Card h3{
     font-family: Inter;
     font-size: 0.875rem;
@@ -27,7 +27,7 @@
     align-items: center;
     flex-wrap: wrap;
     
-    font-size: 24px;
+    font-size: 1em;
     font-style: normal;
     font-weight: 600;
     line-height: 36px; /* 150% */   

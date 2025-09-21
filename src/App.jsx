@@ -2,22 +2,8 @@
 // import { useState } from 'react';
 
 // import React, { useEffect} from 'react';
-import Card from '../components/Cards/Card/Card'
-import ChartCard from '../components/Cards/ChartCard/ChartCard';
-import ContactList from '../components/Layouts/ContactList/ContactList';
-import BasicTable from '../components/Cards/Table/Table';
-import TableRow from '../components/Cards/TableRow/TableRow';
-import ActivityFeed from '../components/Layouts/ActivityFeed/ActivityFeed';
-import NotificationPanel from '../components/Layouts/NotificationPanel/NotificationPanel';
-import Navbar from '../components/Layouts/Navbar/Navbar';
-import TreadyLinechart from '../components/Charts/LineChart/LineChart';
-import TreadyBarchart from '../components/Charts/BarChart/BarChart';
-import MapChart from '../components/Charts/MapChart/MapChart';
-import Sidebar from '../components/Layouts/Sidebar/Sidebar';
-import Orderslist from '../components/Layouts/Orders/Orderslist';
-import ActivityBar from '../components/Layouts/ActivityBar/ActivityBar';
-import Default from '../components/Layouts/Default/Default';
 import Home from '../pages/Home/Home';
+import SalesDonutChart from '../components/Charts/PieChart/PieChart';
 
 
 function App() {
@@ -50,8 +36,9 @@ function App() {
       <ActivityBar/> */}
       {/* <Default/> */}
       <Home/>
+      {/* <SalesDonutChart/> */}
       
-
+      {/* <SalesDonutChart/> */}
       {/* <h1>Vite + React</h1> */}
       {/* <div className="time">
         <h2>{currentTime}</h2>

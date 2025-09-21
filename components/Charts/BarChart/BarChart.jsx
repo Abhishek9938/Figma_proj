@@ -13,14 +13,10 @@ const xLabels = [
   'Jun',
 ];
 
-const highlightScope = {
-  highlight: 'item',
-  fade: 'global',
-};
 
 const settings = {
-  height: 200,
-  width:400,
+  height: 160,
+
   series: [
     { data: pData , showMark: false, color: '#A8C5DA', stack: 'stack1',barWidth: 25  },
     { data: uData , showMark: false, color: '#A8C5DA50', stack: 'stack1',barWidth: 25 },

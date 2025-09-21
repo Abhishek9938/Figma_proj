@@ -1,7 +1,7 @@
 import './TableRow.css'
 function TableRow({fullname,price,quantity,amount}) {
   return (  
-      <tr>
+      <tr style={{fontSize:"1em"}}>
         <td>{fullname}</td>
         <td>${price}</td>
         <td>{quantity}</td>

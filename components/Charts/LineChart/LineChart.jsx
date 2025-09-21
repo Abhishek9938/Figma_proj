@@ -22,7 +22,7 @@ const highlightScope = {
 };
 
 const settings = {
-  height: 300,
+  height: 250,
   series: [
     { data: pData, highlightScope, showMark: false, color: '#A8C5DA' },
     { data: uData , highlightScope, showMark: false, color: '#1C1C1C' },

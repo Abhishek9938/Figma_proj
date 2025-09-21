@@ -6,6 +6,7 @@ import TreadyLinechart from '../../Charts/LineChart/LineChart'
 import MapChart from '../../Charts/MapChart/MapChart'
 import BasicTable from '../../Cards/Table/Table'
 import Navbar from '../Navbar/Navbar' 
+import SalesDonutChart from '../../Charts/PieChart/PieChart'
 function Default({ onToggleSidebar, onToggleActivityBar, className }) {
   return (
     <div className={`Default-main ${className || ''}`}>
@@ -22,6 +23,7 @@ function Default({ onToggleSidebar, onToggleActivityBar, className }) {
           </div>
           <div className='main-section'>
               <BasicTable/>
+              <SalesDonutChart/>
           </div>
         </div>
     </div>
