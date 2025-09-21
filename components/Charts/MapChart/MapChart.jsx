@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import './MapChart.css';
 import { styled } from '@mui/material/styles';
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
+import { useDarkMode } from '../../../contexts/DarkModeContext';
 const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   height: 3,
   borderRadius: 5,
@@ -22,6 +23,7 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
 function MapChart() {
   const svgRef = useRef(null);
   const [markers, setMarkers] = useState([]);
+  const { isDarkMode } = useDarkMode();
 
   
   useEffect(() => {
@@ -56,7 +58,7 @@ function MapChart() {
       const svg = d3.select(svgRef.current)
         .attr("width", width)
         .attr("height", height)
-        .style("background-color", "#F7F9FB");
+        .style("background-color", isDarkMode ? "transparent" : "#F7F9FB");
 
       // Create projection with responsive scaling
       const projection = d3.geoNaturalEarth1()
@@ -75,8 +77,8 @@ function MapChart() {
           .enter().append("path")
           .attr("class", "country")
           .attr("d", path)
-          .style("fill", "#A8C5DA")
-          .style("stroke", "#ffffff")
+          .style("fill", isDarkMode ? "#A8C5DA" : "#A8C5DA")
+          .style("stroke", isDarkMode ? "#1C1C1C" : "#ffffff")
           .style("stroke-width", 1)
 
         // Add markers
@@ -100,8 +102,8 @@ function MapChart() {
           .attr("cx", d => projection(d.coordinates)[0])
           .attr("cy", d => projection(d.coordinates)[1])
           .attr("r", 4)
-          .style("fill", "#1C1C1C")
-          .style("stroke", "#fff")
+          .style("fill", isDarkMode ? "#C6C7F8" : "#1C1C1C")
+          .style("stroke", isDarkMode ? "#fff" : "#fff")
           .style("stroke-width", 2)
           .style("cursor", "pointer")
           .style("filter", "drop-shadow(0 2px 2px rgba(0, 0, 0, 0.10))");
@@ -113,7 +115,6 @@ function MapChart() {
 
     loadD3AndCreateMap();
 
-    // Add resize handler for responsive behavior
     const handleResize = () => {
       if (window.d3 && svgRef.current) {
         createMap();
@@ -125,11 +126,11 @@ function MapChart() {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [isDarkMode]);
 
   return (
     <>
-    <div className='MapChart'>
+    <div className={`MapChart ${isDarkMode ? 'dark-mode' : ''}`}>
     <div className='mapchart-main'>
       <div className='revenue-world'>
           <div className='title'>Revenue by Location</div>

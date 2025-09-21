@@ -34,7 +34,6 @@
     line-height: 1.25rem; /* 142.857% */
 }
 .MapChart .map{
-    height:6rem;
     width:100%;
     align-self: stretch;
     overflow: hidden;
@@ -79,5 +78,23 @@
     font-style: normal;
     font-weight: 400;
     line-height: 1.25rem;
+}
+
+/* Dark mode styles */
+.MapChart.dark-mode .revenue-world {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--dark-border, #333333);
+}
+
+.MapChart.dark-mode .title {
+    color: var(--dark-text-primary, #FFFFFF);
+}
+
+.MapChart.dark-mode .city-name {
+    color: var(--dark-text-secondary, #E0E0E0);
+}
+
+.MapChart.dark-mode .revenue-amount {
+    color: var(--dark-text-primary, #FFFFFF);
 }
 
