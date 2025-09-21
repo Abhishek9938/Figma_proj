@@ -7,8 +7,9 @@ import MapChart from '../../Charts/MapChart/MapChart'
 import BasicTable from '../../Cards/Table/Table'
 import Navbar from '../Navbar/Navbar' 
 import SalesDonutChart from '../../Charts/PieChart/PieChart'
+import Orderslist from '../Orders/Orderslist'
 import { useDarkMode } from '../../../contexts/DarkModeContext'
-function Default({ onToggleSidebar, onToggleActivityBar, className }) {
+function Default({ onToggleSidebar, onToggleActivityBar, className, showOrdersTable = false }) {
   const { isDarkMode } = useDarkMode()
   
   return (
@@ -28,6 +29,11 @@ function Default({ onToggleSidebar, onToggleActivityBar, className }) {
               <BasicTable/>
               <SalesDonutChart/>
           </div>
+          {showOrdersTable && (
+            <div className='main-section'>
+                <Orderslist/>
+            </div>
+          )}
         </div>
     </div>
   )

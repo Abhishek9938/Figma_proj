@@ -1,9 +1,12 @@
 import Card from "../Card/Card"
 import { COLORS } from "../../../styles/colors";
+import { useNavigate } from "react-router-dom";
 
 function ChartCard() {
+  const navigate = useNavigate();
+  
   const cardsData = [
-    {id:1, title: "Orders", value: "1,219", change: "-0.03",bgcolor:COLORS.LIGHT },
+    {id:1, title: "Orders", value: "1,219", change: "-0.03",bgcolor:COLORS.LIGHT, onClick: () => navigate('/orders') },
     {id:2, title: "Revenue", value: "$695", change: "15.03",bgcolor:COLORS.LIGHT },
     {id:3, title: "Growth", value: "30.1%", change: "6.08",bgcolor:COLORS.PURPLE },
     {id:4, title: "Customers", value: "3,781", change: "11.01",bgcolor:COLORS.BLUE}
@@ -18,6 +21,7 @@ function ChartCard() {
           value={card.value}
           change={card.change}
           bgcolor={card.bgcolor}
+          onClick={card.onClick}
         />
       ))}
     </div>

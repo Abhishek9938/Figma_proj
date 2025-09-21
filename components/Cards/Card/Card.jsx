@@ -1,13 +1,17 @@
 import ArrowFallIcon from '@/assets/icons/main/ArrowFall.svg';
 import ArrowRiseIcon from '@/assets/icons/main/ArrowRise.svg';
 import './Card.css'
-const Card = ({title,value,change,bgcolor}) => {
+const Card = ({title,value,change,bgcolor,onClick}) => {
 
   const isPositive = parseFloat(change) > 0;  
   return (
     <>
     <div className='Card'>
-        <div className="card-main gap-2" style={{ backgroundColor: `var(${bgcolor})` }}> 
+        <div 
+          className="card-main gap-2" 
+          style={{ backgroundColor: `var(${bgcolor})`, cursor: onClick ? 'pointer' : 'default' }} 
+          onClick={onClick}
+        > 
           {/* Title */}
           <h3 className="title">{title}</h3>
 

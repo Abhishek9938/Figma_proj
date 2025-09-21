@@ -39,9 +39,9 @@ function Orderslist() {
     const toggleSort = () => {
       const sortedOrders = [...orders].sort((a, b) => {
         if (sortAsc) {
-          return a.user.localeCompare(b.user); // Ascending
+          return a.user.localeCompare(b.user);
         } else {
-          return b.user.localeCompare(a.user); // Descending
+          return b.user.localeCompare(a.user); 
         }
       });
       console.log(sortAsc, orders);

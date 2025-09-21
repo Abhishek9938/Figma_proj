@@ -10,6 +10,7 @@
     align-items: flex-start;
     align-self: stretch;
     border-radius: var(--8, 0.5rem);
+    color: var(--black-100, #1C1C1C);
 }
 .BasicTable{
     width: 65%;
@@ -17,12 +18,14 @@
 }
 .BasicTable .basic-table{
     display: flex;
-    
+    border-radius: var(--16, 1rem);
+    background: var(--Primary-Light, #F7F9FB);
+    gap: var(--4, 0.25rem);
+    flex: 1 0 0;
     padding: var(--24, 1.5rem);
     flex-direction: column;
     align-items: flex-start;
     gap: var(--4, 0.25rem);
-    flex: 1 0 0;
     border-radius: var(--16, 1rem);
 }
 
